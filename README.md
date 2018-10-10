@@ -1,6 +1,6 @@
 ﻿# ileri-odevler
 
-[cw2](https://github.com/ummugulsumcan/ileri-odevler/blob/master/arraydegis1.html)
+[cw2](https://ummugulsumcan.github.io/ileri-odevler/arraydegis1.html)
 
-[cw3](https://github.com/ummugulsumcan/ileri-odevler/blob/master/inspector.html)
+[cw3](https://ummugulsumcan.github.io/ileri-odevler/inspector.html)
  
