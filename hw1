@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+<meta charset="UTF-8">
+   
+ <meta name="viewport" content="width=device-width">
+   
+ <title>Add Course </title>
+<p id="outA">a = [ ] 3</p>
+
+</head>
+
+<script>
+"use strict";
+
+
+var array = new Array();
+function modify() {
+ 
+let i = Number(ie.value); 
+let x = xe.value; 
+    
+xe.value = a[i]; 
+a[i] = x; 
+reportA("a["+i+"] = "+x);
+}
+
+
+function remove() {
+   
+ let i = Number(ie.value);
+  
+  xe.value = a[i]; a.splice(i, 1); 
+reportA("remove "+i);
+}
+
+
+function push() {
+  
+  let x = xe.value; let i = Number(ie.value);
+ 
+   a.push(x); reportA("push "+x);
+}
+
+
+function popA() {
+  
+  xe.value = a.pop(); reportA("pop ");
+}
+
+
+function add() {
+
+array[0] =ni.value;
+array[1] = mi.value;
+array[2] = fi.value;
+a.push(array);
+
+reportA("add "+a);
+
+ 
+}
+
+
+function yaz() {
+for(let i=0;i<a.length;i++){
+    outb.innerText+=a[i][0]+" "+a[i][1]+" "+a[i][2]+"\n";
+    }
+ 
+reportA("yaz"+ni +mi +fi);
+
+
+ 
+}
+
+
+function avg() {
+let avg = [];  
+let m=mi.value *(0.5);
+let f=fi.value *(0.5);
+let ort=m+f;
+avg.push(ort);
+
+outd.innerText=avg;
+
+ 
+}
+
+
+
+
+function reportA(str) {
+    
+outA.innerText = "a = [ "+ a.join(", ")+" ] "+a.length;
+ 
+console.log(str);
+}
+
+
+</script>
+
+<body>
+
+<h2 id=title></h2>
+
+
+<p>
+Name= <input type=text id=ni value=1  style="width:40px"> &emsp;
+</p> 
+
+    
+<p>
+
+
+   Midterm = <input type=text   id=mi value=53 style="width:99px"> 
+</p>
+<p>
+
+
+   Final = <input type=text   id=fi value=53 style="width:99px"> 
+</p>
+
+<p>
+<input type=button value="add"  onClick="add()">
+
+</p>
+<p><input type=button value="print"  onClick="yaz()">
+
+<input type=button value="avg"  onClick="avg()">
+
+<input type=button value="max"   onClick="popA()">
+</p>
+
+
+
+<hr />
+<b>Output Of Print</b>
+<pre id=outb></pre>
+<hr />
+<b>Output Of Avg</b>
+<pre id=outd></pre>
+<hr />
+<b>Output Of Max</b>
+<pre id=outm></pre>
+<hr />
+
+<script>
+    title.innerText = document.title;
+   
+ const a = [];  //initially
+ 
+ 
+ reportA("start");
+</script>
+
+
+</body>
+</html>
