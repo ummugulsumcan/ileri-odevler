@@ -5,4 +5,6 @@
 [cw3](https://ummugulsumcan.github.io/ileri-odevler/inspector.html)
 
 [hw1](https://ummugulsumcan.github.io/ileri-odevler/Hw1.html)
+
+[cw6](https://ummugulsumcan.github.io/ileri-odevler/Timing.html)
  
