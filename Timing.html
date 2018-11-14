@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="Database.js"></script>
+    <title>Set Intersection </title>
+
+<script>
+"use strict";
+const url = "https://maeyler.github.io/JS/data/";
+let array = [], map=new Map();
+var countarray=0;
+var countmap=0;
+let array1 = [];
+let i;
+
+for (i = 0; i <10000; i++) {
+    let r=Math.floor((Math.random() * 100000000) + 1160000000); 
+    array1.push(r);  
+}
+
+
+
+function readData(file) {
+    console.log("readData "+file);
+    fetch(url+file)
+        .then(r => r.text(), console.log)
+        .then(addStudents, console.log);
+}
+function parseStudent(line) {
+    let b = line.split("\t");
+    let id = b[0], name = b[1], gpa = b[2];
+    let std = new Student(id, name, gpa);
+    let list = [];
+    for (let i=3; i<b.length; i++) 
+        list.push(b[i]);
+    std.courses = list
+    return std
+}
+function addStudents(txt) {
+    let msg = "\nData contains ";
+    msg += txt.length+" chars, ";
+    let a = txt.split("\n");
+    msg += a.length+" lines \n";
+    for (let s of a) {
+      let std = parseStudent(s);
+      array.push(std.id); 
+      map.set(std.id,std);
+        }
+
+    msg += array.length+" students, "
+    out.innerText += msg
+}
+function intersectarray(a, b) { //fast
+    for (let x of b){
+        if(a.includes(x)) 
+         countarray++
+
+   }
+}
+
+function intersectmap(a, b) { //slow
+    for(let x of a){
+        if(b.has(x)) 
+            countmap++
+}
+}
+function timing(f) {
+    let t = performance.now()
+
+    let x = f(set, set)  //calculate intersection by itself
+
+    t = performance.now() - t
+    let s = f.name+": "+t.toPrecision(3)+" msec "+x.size
+    out.innerText += "\n"+s; console.log(s)
+}
+function arraytiming(f) {
+    let t= performance.now()
+
+    let x = f(array1, array)  //calculate intersection by itself
+
+    t = performance.now() - t
+    
+    let s = f.name+": "+t.toPrecision(3)+" msec count "+countarray
+
+    out.innerText += "\n"+s; console.log(s)
+}
+function maptiming(f) {
+    let t = performance.now()
+
+    let x = f(array1, map)  //calculate intersection by itself
+
+    t = performance.now() - t
+    
+    let s = f.name+": "+t.toPrecision(3)+" msec count "+countmap
+    out.innerText += "\n"+s; console.log(s)
+}
+</script>
+</head>
+
+<body>
+<h2 id=title></h2>
+<button onClick='arraytiming(intersectarray)'>Method 1</button>
+<button onClick='maptiming(intersectmap)'>Method 2</button>
+<p id=out>Question 3 in the exam</p>
+<hr />
+<b>Sample code</b>
+<pre id=sample></pre>
+<hr />
+
+<script>
+    title.innerText = document.title;
+    sample.innerText = intersectarray+"\n"+intersectmap;
+    readData("Students.txt")
+</script>
+
+</body>
+</html>
