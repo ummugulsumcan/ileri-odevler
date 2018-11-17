@@ -7,4 +7,6 @@
 [hw1](https://ummugulsumcan.github.io/ileri-odevler/Hw1.html)
 
 [cw6](https://ummugulsumcan.github.io/ileri-odevler/Timing.html)
+
+[cw5](https://ummugulsumcan.github.io/ileri-odevler/cw5.html)
  
