@@ -1,4 +1,4 @@
-const CACHE ='JS'
+const CACHE ='ileri-odevler'
 function installCB(e) {
   console.log('install oldu', e.request);
 }
