@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>cw7 </title>
+</head>
+
+<script>
+"use strict";
+//June 8, 2018 MAE -- basis for 
+//https://maeyler.github.io/Visual-Mujam/
+//
+
+  const array= [
+    {id: "116690190", gpa: 2.14, name: "ŞEYMA"},
+    {id: "116690249", gpa: 2.14, name: "BERKAY"},
+    {id: "116690267", gpa: 2.99, name: "FATMANUR"},
+    {id: "116690318", gpa: 1.7,  name: "YAĞMUR"},
+    {id: "116690337", gpa: 3.19, name: "HAKAN"},
+    {id: "116690352", gpa: 2.78, name: "BUKEYHAN"},
+    {id: "116690495", gpa: 2.46, name: "ESRA"}
+  ];
+
+function makeTable() {
+    let row = "<th></th>";
+    for (let j of (Object.keys(array[0]))) 
+        row += "<th>"+j+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < array.length; i++) {
+       row = "<th>"+(i+1)+"</th>";
+       for (let j of (Object.keys(array[0]))) {
+          
+          row += "<td>"+(array[i][j])+"</td>";
+       }
+       text += "<tr>"+row+"</tr>";
+    }
+    const t = text.length+" chars";
+    
+    tablo.innerHTML = text; out.innerText = t; 
+}
+
+</script>
+
+<style>
+    table { border-collapse: collapse; }
+    th { color: blue; padding: 5px 5px; }
+    td { 
+        border: 1px solid blue; 
+        padding: 5px 5px; 
+        text-align: center; 
+    }
+    td:hover .tip { visibility: visible; }
+    .tip {
+        visibility: hidden;
+        font-size: small;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 5px 5px;
+        position: absolute;
+    }
+</style>
+
+<body>
+<center>
+<h2 id=title></h2>
+
+<table id="tablo"></table>
+<p id=out style="font-size:small"></p>
+<input type=button value="Make Table" onclick="makeTable()">
+
+<p><a href="https://github.com/ummugulsumcan" target="ExternalDocument">
+Bu repoda</a> JavaScript öğrenmeye yönelik örnek web sayfaları bulacaksınız</p>
+
+
+
+</form>
+</center>
+
+
+
+
+
+<script>
+    title.innerText = document.title;
+  
+    
+</script>
+
+</body>
+</html> 
