@@ -13,4 +13,4 @@
 
 [hw3](https://ummugulsumcan.github.io/ileri-odevler/hw3.html)
 
-[hw2](https://ummugulsumcan.github.io/ileri-odevler/index.html)
+
