@@ -12,3 +12,4 @@
 [hw1](https://ummugulsumcan.github.io/ileri-odevler/Hw1.html)
 
 [hw3](https://ummugulsumcan.github.io/ileri-odevler/hw3.html)
+[hw2](https://ummugulsumcan.github.io/ileri-odevler/hw2.html)
