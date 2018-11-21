@@ -1,54 +1,71 @@
 <!DOCTYPE html>
-<html lang="en-US"><head>
+<html>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link href="https://maeyler.github.io/JS/sss/inspector.css" rel="stylesheet" media="all">
-    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
-    <script src="Database.js"></script>
-   
-    <title>Eloquent JavaScript </title>
-</head>
+    <title>HW2</title>
 
-<body>
-<p><b id="docName">Inspector V2.9a</b> &nbsp;
-<a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
-<a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
-</p>
+<script src="Database.js"> </script>
 
 <script>
-"use strict";
-
-function init() {
-     display(MENU); 
-    	display(new CW4()); 
-display(MENU);
-    
-}
-    docName.innerText = "Inspector "+VERSION;
-    try {
-        inspect(document.body, init); //makes the table
-        //inp.value = "new Number(c.pi)";
-    } catch(e) {
-        reportError(e);
-    }
-
-
-
-
+c=new Database();
 </script>
 
-
-<p><input type="file" multiple="" onchange="fileSelect(this)">
-</p><p>
-<a href="https://maeyler.github.io/BLM305/exam/Quiz.html">Quiz solution</a> &emsp;
-<a href="https://maeyler.github.io/JS/hard/Fetch%20remote.html">Fetch remote</a>&emsp;
-<a href="https://ummugulsumcan.github.io/ileri-odevler/arraydegis1.html">cw2</a> &emsp;
-<a href="https://ummugulsumcan.github.io/ileri-odevler/inspector.html">cw3</a> &emsp;
-<a href="https://ummugulsumcan.github.io/ileri-odevler/Hw1.html">hw1</a> &emsp;
+</head>
 
 
+<h2 id="title" >Home Work 2</h2>
+
+
+
+<p>gpa: 
+<input type=number id=gpa >
 </p>
-<pre id="disp1"></pre>
-<img id="disp2">
 
-</body></html>
+<p>Ögrenci ıd ?: 
+<input type=number id=sID >
+</p>
+
+<p>Ders Kodu : 
+<input type=text id=cID >
+</p>
+
+<p>Sınıf kodu ?: 
+<input type=text id=dID >
+</p>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomStd()'>Random Ogrenci</button>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomCourse()'>Random Ders</button>
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findBest()'>Best GPA</button>
+
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.gpabuyuk(gpa.value)'> GPA'si yuksek ogrenci</button>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.GPAkucuk(gpa.value)'> GPA'si dusuk ogrenci</button>
+
+
+<button class="button" ,  onClick='out.innerText+="\n\n"+c.fStudents(cID.value)'> Ogrencileri Listele </button>
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findClassList(cID.value)'> Siniflari Listele </button>
+
+
+<button class="button" , onClick='out.innerText=""'>Clear</button>
+
+
+
+<p id=out >Sonuc:</p>
+
+
+<script>
+    title.innerText = document.title;
+        
+</script>
+
+</body>
+</html>
+
