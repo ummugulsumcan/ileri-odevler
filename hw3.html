@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<title> Animation </title>
+<meta charset="utf-8">
+<p id="toAnimate">
+<i>Aramakla bulunmaz... </i></p>
+<p id="toAnimate2"><b>Lakin bulanlar arayanlardır...</b></p>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #e56363;
+  background: grey;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 4rem;
+  text-align: center;
+  overflow-x: hidden;
+  
+  
+}
+p
+ {
+  color: black;
+
+ /* Ortalanmış olacak */
+  text-align: center;
+   }
+
+</style>
+
+
+<script>
+var frames = [
+{ transform: 'scale(1) rotate(-10deg)', offset: 0, opacity: 1 },
+{ transform: 'scale(.3) rotate(10deg)', opacity: .2, offset: .333333 },
+  
+{ transform: 'scale(.1) rotate(10deg)', opacity: .567, offset: .666667 },
+{ transform: 'scale(.2) rotate(-10deg)', opacity: .4, offset: 1 }];
+
+var timings = {
+  duration: 1000,
+  iterations: Infinity,
+  direction: 'alternate-reverse',
+  fill: 'both',
+  delay: 10, };
+
+var player, player2;
+player = document.getElementById('toAnimate').animate(frames, timings);
+
+player2 = document.getElementById('toAnimate2').animate(frames, timings);
+player2.currentTime = 700; //
+player1.currentTime = 700;
+
+</script>
