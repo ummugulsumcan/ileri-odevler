@@ -2,7 +2,7 @@
   "name": "Ileri Programlama Ummugulsum",
   "short_name": "IleriProg",
   "description": "Advanced Programming work files",
-  "start_url": "/CW7/CW7.html",
+  "start_url": "ileri-odevler/CW7/CW7.html",
   "display": "standalone",
   "background_color": "cyan",
   "theme_color": "cyan",
