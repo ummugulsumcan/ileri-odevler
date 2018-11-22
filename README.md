@@ -13,9 +13,9 @@
  
 [HomeWork 1](https://ummugulsumcan.github.io/ileri-odevler/Hw1.html)
 
-[HomeWork 2](https://ummugulsumcan.github.io/ileri-odevler/hw3.html)
+[HomeWork 3](https://ummugulsumcan.github.io/ileri-odevler/hw3.html)
 
-[HomeWork 3](https://ummugulsumcan.github.io/ileri-odevler/hw2.html)
+[HomeWork 2](https://ummugulsumcan.github.io/ileri-odevler/hw2.html)
 
 
 
