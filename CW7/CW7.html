@@ -5,18 +5,23 @@
     <title>cw7 </title>
      <link rel="manifest" href="manifest.json">
 </head>
+<script>
 
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('https://aysesenafeyiz.github.io/ileriProgramlama/CW7/sw.js')
+        .then((reg) => { console.log('SW Registered', reg) })
+        .catch(console.log)
+    }
+    
+</script>
+    
 <script>
 "use strict";
 //June 8, 2018 MAE -- basis for 
 //https://maeyler.github.io/Visual-Mujam/
 //
-if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('https://ummugulsumcan.github.io/ileri-odevler/CW7/sw.js')
-        .then((reg) => { console.log('SW Registered', reg) })
-        .catch(console.log)
-    }
+
   const array= [
     {id: "116690190", gpa: 2.14, name: "ŞEYMA"},
     {id: "116690249", gpa: 2.14, name: "BERKAY"},
