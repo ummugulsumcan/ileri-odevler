@@ -8,7 +8,7 @@
 
 [CW5](https://ummugulsumcan.github.io/ileri-odevler/cw5.html)
 
-[CW7](https://ummugulsumcan.github.io/ileri-odevler/CW7.html)
+[CW7](https://ummugulsumcan.github.io/ileri-odevler/CW7/CW7.html)
 
  
 [HomeWork 1](https://ummugulsumcan.github.io/ileri-odevler/Hw1.html)
