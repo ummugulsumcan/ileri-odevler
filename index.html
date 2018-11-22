@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HW2</title>
+
+<script src="Database.js"> </script>
+
+<script>
+c=new Database();
+</script>
+
+</head>
+
+
+<h2 id="title" >Home Work 2</h2>
+
+
+
+<p>gpa: 
+<input type=number id=gpa >
+</p>
+
+<p>Ögrenci ıd ?: 
+<input type=number id=sID >
+</p>
+
+<p>Ders Kodu : 
+<input type=text id=cID >
+</p>
+
+<p>Sınıf kodu ?: 
+<input type=text id=dID >
+</p>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomStd()'>Random Ogrenci</button>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.randomCourse()'>Random Ders</button>
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findBest()'>Best GPA</button>
+
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.gpabuyuk(gpa.value)'> GPA'si yuksek ogrenci</button>
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.GPAkucuk(gpa.value)'> GPA'si dusuk ogrenci</button>
+
+
+<button class="button" ,  onClick='out.innerText+="\n\n"+c.fStudents(cID.value)'> Ogrencileri Listele </button>
+
+
+<button class="button" , onClick='out.innerText+="\n\n"+c.findClassList(cID.value)'> Siniflari Listele </button>
+
+
+<button class="button" , onClick='out.innerText=""'>Clear</button>
+
+
+
+<p id=out >Sonuc:</p>
+
+
+<script>
+    title.innerText = document.title;
+        
+</script>
+
+</body>
+</html>
+
