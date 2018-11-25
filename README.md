@@ -4,9 +4,9 @@
 
 [CW3](https://ummugulsumcan.github.io/ileri-odevler/inspector.html)
 
-[CW6](https://ummugulsumcan.github.io/ileri-odevler/Timing.html)
-
 [CW5](https://ummugulsumcan.github.io/ileri-odevler/cw5.html)
+
+[CW6](https://ummugulsumcan.github.io/ileri-odevler/Timing.html)
 
 [CW7](https://ummugulsumcan.github.io/ileri-odevler/CW7/CW7.html)
 
