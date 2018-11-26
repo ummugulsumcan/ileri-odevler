@@ -1,0 +1,20 @@
+{
+  "name": "Ileri Programlama Ummugulsum",
+  "short_name": "IleriProg",
+  "description": "Advanced Programming work files",
+  "start_url": "ileri-odevler/index.html",
+  "display": "standalone",
+  "background_color": "cyan",
+  "theme_color": "cyan",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/ummugulsumcan/ileri-odevler/master/CW7/foto.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }, {
+      "src": "https://raw.githubusercontent.com/ummugulsumcan/ileri-odevler/master/CW7/foto.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
+}
