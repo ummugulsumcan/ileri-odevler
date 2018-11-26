@@ -8,12 +8,12 @@
   "theme_color": "cyan",
   "icons": [
     {
-      "src": "images/305A.png",
+      "src": "https://raw.githubusercontent.com/ummugulsumcan/ileri-odevler/master/CW7/JS.png",
       "sizes": "512x512",
       "type": "image/png"
     }, {
-      "src": "images/305A.png",
-      "sizes": "192x192",
+      "src": "https://raw.githubusercontent.com/ummugulsumcan/ileri-odevler/master/CW7/JS.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
