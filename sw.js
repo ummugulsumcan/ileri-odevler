@@ -21,3 +21,10 @@ function fetchCB(e) { //fetch first
   )
 }
 self.addEventListener('fetch', fetchCB)
+
+function readBlob() {
+    show("FB"); // fetch blob
+    fetch(url.value)
+      .then(r => r.blob())  //response r
+      .then(b => report(b+" bytes"));
+}
