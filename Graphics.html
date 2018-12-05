@@ -1,0 +1,117 @@
+<html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Canvas </title>
+
+ <button type="button" value="draw" onclick="boyut()">Boyut</button>
+ <input type="text" id="text" value="53" style="width:99px">
+ <button type="button" value="draw" onclick="metod2()">Merhaba</button>
+<button type="button" value="draw" onclick="metod()">Renk</button>
+
+<input type="color" value="#ff0000" id="renk">
+
+
+
+  <style>
+
+    svg, canvas {
+        background: cyan;
+        font: 10px arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+<hr>
+
+<h2>Using Canvas</h2>
+<canvas id="canvas" width="340" height="100"></canvas>
+<p>Canvas is an image drawn by JavaScript</p>
+<pre id="sample">function draw() {<br>    cx.beginPath(); cx.lineWidth = 4;<br>    cx.fillStyle = "yellow"; cx.strokeStyle = "blue";<br>    cx.arc(50, 50, 40, 0, 2*Math.PI);<br>    cx.fill(); cx.stroke();<br>    cx.fillStyle = "black"; <br>    cx.fillText("arc",44,55);<br><br>    cx.beginPath(); cx.lineWidth = 5;<br>    cx.fillStyle = "pink"; cx.strokeStyle = "red";<br>    cx.rect(110, 10, 100, 80);<br>    cx.fill(); cx.stroke();<br>    cx.fillStyle = "black"; <br>    cx.fillText("rect",148,55);<br>}</pre>
+
+<hr>
+
+<p>Ref: <i>Eloquent JavaScript</i>,
+<a href="http://eloquentjavascript.net/17_canvas.html" target="ExternalDocument"> Chap 17</a>
+</p>
+
+<script>
+"use strict";
+function draw() {
+    cx.beginPath(); cx.lineWidth = 4;
+    cx.fillStyle = "blue"; cx.strokeStyle = "blue";
+    cx.arc(50, 50, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("arc",44,55);
+
+    cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = "pink"; cx.strokeStyle = "red";
+    cx.rect(110, 10, 100, 80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("rect",148,55);
+}
+function metod() {
+    cx.beginPath(); cx.lineWidth = 4;
+    cx.fillStyle = renk.value;
+
+    cx.strokeStyle = "blue";
+    cx.arc(50, 50, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("arc",44,55);
+
+    cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = renk.value;
+    cx.strokeStyle = "red";
+    cx.rect(110, 10, 100, 80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("rect",148,55);
+}
+
+
+function boyut() {
+    cx.beginPath(); 
+    cx.lineWidth = text.value;
+    cx.fillStyle = "blue";
+    cx.strokeStyle = "blue";
+    cx.arc(50, 50, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+   cx.fillText("arc",10,55);
+
+    cx.beginPath(); cx.lineWidth = text.value;
+    cx.fillStyle = "pink"; cx.strokeStyle = "red";
+    cx.rect(110, 10, 100, 80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("rect",148,55);
+}
+function metod2() {
+     cx.beginPath(); cx.lineWidth = 4;
+    cx.fillStyle = "blue"; cx.strokeStyle = "blue";
+    cx.arc(50, 50, 40, 0, 2*Math.PI);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("Meraba",44,55);
+
+    cx.beginPath(); cx.lineWidth = 5;
+    cx.fillStyle = "pink"; cx.strokeStyle = "red";
+    cx.rect(110, 10, 100, 80);
+    cx.fill(); cx.stroke();
+    cx.fillStyle = "black"; 
+    cx.fillText("Merhaba",148,55);
+}
+
+
+    sample.innerText = draw;
+    const cx = canvas.getContext("2d");
+    draw();
+</script>
+
+
+
+</body></html>
