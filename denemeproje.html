@@ -1,0 +1,63 @@
+
+<div id="sayiTahmin">
+  <input type="text" id="sayi" />
+  <button id="tahminEt" disabled>Guess</button>
+  <button id="yeniOyun">New Game</button>
+  <p id="sonuc"></p>
+
+</div>
+<div class="saga-ok"></div>
+<div class="sola-ok"></div>
+<style>
+
+  #sayiTahmin {
+    width: 100%;
+    text-align: center;
+  }
+
+  input,
+  button {
+    padding: 20px;
+    text-align: center;
+  }
+
+
+
+
+</style>
+
+
+
+<script>
+"use strict";
+  var hakSayisi = 0;
+  var rastgeleSayi = 0;
+  var tahminEt = document.getElementById("tahminEt");
+  var yeniOyun = document.getElementById("yeniOyun");
+  var sonuc = document.getElementById("sonuc");
+  var sayi = document.getElementById("sayi");
+
+  yeniOyun.onclick = yeni;
+  tahminEt.onclick = tahmin;
+
+   function randomInt(min, max) {
+
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function yeni() {
+    rastgeleSayi = randomInt(0, 99);
+    hakSayisi = 10;
+    sonuc.innerHTML = "";
+    sayi.value = "";
+    tahminEt.disabled = false;
+    yeniOyun.disabled = true;
+  }
+  
+  function tahmin() {
+
+
+
+    
+  }
+</script>
