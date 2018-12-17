@@ -1,0 +1,109 @@
+
+<html>
+
+
+<body background= "https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif"></body>
+<h1>SAYI TAHMIN OYUNU </h1>
+<button id="yeniOyun" >Yeni OYUN </button>
+<input type="text" id="sayi" />
+<button id="tahminEt" disabled>0-20 arası sayı tahmin et</button>
+<input type="text" id="sonuc" />
+<img src="  https://img.icons8.com/color/2x/finger-and-thumb.png  " id="image" >
+
+</html> 
+  
+<style>
+ 
+input{
+    padding: 20px;
+    text-align: center;
+    margin:0 auto;
+    display:block;
+  }
+img
+{
+    opacity:0.5;
+    text-align: left ;
+   margin-left: auto;
+}
+button {
+    padding: 20px;
+    text-align: center;
+    margin:0 auto;
+    display:block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+h1 {
+  color: white;
+  text-align: center;
+ font-family: "Times New Roman", Times;
+ font-style: oblique;
+ text-shadow: 3px 2px green;
+ word-spacing: -5px;
+}
+</style>
+
+
+
+
+<script>
+"use strict";
+  var mesaj = "";
+  var hakSayisi = 0;
+  var rastgeleSayi = 0;
+  var _tahminEt = document.getElementById("tahminEt");
+  var _yeniOyun = document.getElementById("yeniOyun");
+  var _sonuc = document.getElementById("sonuc");
+  var _sayi = document.getElementById("sayi");
+
+  _yeniOyun.onclick = yeni;
+  _tahminEt.onclick = tahmin;
+
+   function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function yeni() {
+    rastgeleSayi = randomInt(0, 20);
+    hakSayisi = 10;
+    _sonuc.innerHTML = "";
+    _sayi.value = "";
+    _tahminEt.disabled = false;
+    _yeniOyun.disabled = true;
+  }
+  
+  function tahmin() {
+    if (hakSayisi == 0) return;
+    var girilenSayi = parseInt(_sayi.value);
+   
+    if (isNaN(girilenSayi)) return;
+
+    if (rastgeleSayi > girilenSayi) {
+
+       sonuc.value = "Daha  buyuk değer deneyin";
+   
+    } else if (girilenSayi > rastgeleSayi) {
+       sonuc.value = "Daha kucuk  değer deneyin";
+      
+    } 
+      else {
+      sonuc.value = "Tebrikler!!!";
+      
+      _tahminEt.disabled = true;
+      _yeniOyun.disabled = false;
+      
+    }
+    hakSayisi--;
+    _sonuc.innerHTML = mesaj
+    _sonuc.innerHTML += "<br />"
+    _sonuc.innerHTML += "Kalan hak sayısı : " + hakSayisi
+
+    if (hakSayisi == 0) {
+      _tahminEt.disabled = true;
+      _yeniOyun.disabled = false;
+    }
+
+  }
+</script>
