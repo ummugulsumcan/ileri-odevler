@@ -1,0 +1,221 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ümmü</title>
+
+    <style>
+    body {
+        background-image : url("https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif");
+    }
+    input{
+        padding: 20px;
+        text-align: center;
+        margin:0 auto;
+        display:block;
+   font-style: oblique;
+  font-size: 15px;
+    }
+    img
+    {
+        opacity: 1;
+        text-align: left ;
+        margin-left: auto;
+    }
+    .gift
+    {
+        width: 200px;
+         height:200px;
+      margin:0 auto;
+    }
+    button {
+        padding: 20px;
+     margin:10 auto;
+     display:block;
+     font-size: 12px; 
+     text-align: center;
+     outline: none;
+     background-color: #4CAF50;
+     border: none;
+     color: white;
+      font-style: oblique;
+     font-size: 15px;
+   
+    }
+    h1 {
+        color: white;
+        text-align: center;
+       font-style: oblique;
+        text-shadow: 3px 2px green;
+        word-spacing: -5px;
+        margin:20 auto;
+    }
+  .imageu{
+  width: 200px;
+  height:100px;
+  background: green;
+  position: relative;
+  -webkit-animation-name: imageu;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1000ms;  /* Safari 4.0 - 8.0 */  
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-name: imageu;
+  animation-duration:1000ms;  
+  animation-fill-mode: backwards;
+ margin:20px auto;
+animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+
+
+.imaged{
+  width: 200px;
+  height: 100px;
+  background: green;
+  position: relative;
+  -webkit-animation-name: imagede;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1000ms;  /* Safari 4.0 - 8.0 */  
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-name: imagede;
+  animation-duration: 1000ms;  
+  animation-fill-mode: backwards;
+   margin:20px auto;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+  @-webkit-keyframes imagede {
+  from {top: 200px;}
+  to {top: 0px; background-color: green;}
+}
+
+@keyframes imagede{
+  from {top: 200px;}
+  to {top: 0px; background-color: green;}
+}
+
+
+  @-webkit-keyframes imageu {
+  from {top: 0px;}
+  to {top: 200px; background-color: green;}
+}
+
+@keyframes imageu {
+  from {top: 0px;}
+  to {top: 200px; background-color: green ;}
+}
+    </style>
+</head>
+<body>
+    <h1>SAYI TAHMIN OYUNU </h1>
+
+    <button id="yeniOyun" onclick =" yeni()" >Yeni OYUN </button>
+
+    <input type="text" id="sayi" />
+
+    <button id="tahminEt"  onclick ="tahmin()" disabled>0-8 arası sayı tahmin et</button>
+
+    <input type="text" id="sonuc"/>
+
+    <img src="https://img.icons8.com/ios/2x/down.png " id="imagedown" class="imageu" >
+
+    <img src=  "https://img.icons8.com/ios/2x/up.png " id="imageup" class="imaged" >
+
+    <img src=  " https://media3.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif?cid=3640f6095c19093d584b696845d06519" class="gift"  id="gift">
+
+
+<script>
+  
+    var hakSayisi;
+    var rastgeleSayi = 0;
+
+ 
+
+    
+    
+ 
+     
+      sayi.value = "";
+      sonuc.value="";
+
+    document.getElementById("imageup").style.display = "none";
+
+  document.getElementById("imagedown").style.display = "none";
+
+   document.getElementById("gift").style.display = "none";
+
+    function yeni() {
+     hakSayisi=3;
+
+    rastgeleSayi = Math.floor((Math.random() * 8) + 0);
+
+     document.getElementById("imageup").style.display = "none";
+     document.getElementById("imagedown").style.display = "none";
+    document.getElementById("gift").style.display = "none";
+   
+  
+    sonuc.value="";
+    sayi.value="";
+
+
+     alert("Oyuna başlamak için bir rakam gir! 3 hakkınız var ");
+  
+       }
+
+    function tahmin() {
+
+     var girilenSayi = parseInt(sayi.value);
+    
+      document.getElementById("imageup").style.display = "none";
+      console.log(rastgeleSayi);
+     document.getElementById("imagedown").style.display = "none";
+   document.getElementById("gift").style.display = "none";
+     if (rastgeleSayi > girilenSayi) {
+
+         sonuc.value = "Daha  buyuk değer deneyin";
+        document.getElementById("imageup").style.display = "block";
+         
+      } 
+     else if (girilenSayi > rastgeleSayi) {
+       sonuc.value = "Daha kucuk  değer deneyin";
+      document.getElementById("imagedown").style.display = "block";
+        
+      } 
+     else if(girilenSayi == rastgeleSayi) {
+      sonuc.value = "Tebrikler!!!";
+      document.getElementById("gift").style.display = "block";
+
+    document.getElementById("imageup").style.display = "none";
+    document.getElementById("imagedown").style.display = "none";
+    }
+
+    else{
+
+ alert("Tahmın yapmak için rakam giriniz ");
+
+    }
+  
+
+   
+  
+ console.log("haksayısı ="+hakSayisi);
+
+  if ( hakSayisi == 0 ) {
+   document.getElementById("imageup").style.display = "none";
+
+     document.getElementById("imagedown").style.display = "none";
+document.getElementById("gift").style.display = "none";
+       sonuc.value = " Kaybettiniz.Hakkınız bitti!!!";
+
+       alert("Kaybettiniz.Hakkınız bitti!!! Tutulan sayı = "+rastgeleSayi+"!");
+
+      
+    }
+
+hakSayisi--;
+  }
+</script>
+
+</body>
+
+</html>
+
