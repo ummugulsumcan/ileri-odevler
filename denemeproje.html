@@ -13,9 +13,9 @@
         padding: 20px;
         text-align: center;
         margin:0 auto;
-       
-     font-style: oblique;
-     font-size: 12px;
+        display:block;
+   font-style: oblique;
+  font-size: 15px;
     }
     img
     {
@@ -31,9 +31,9 @@
     }
     button {
         padding: 20px;
-       margin:10 auto;
-     
-     font-size: 10px; 
+     margin:10 auto;
+     display:block;
+     font-size: 12px; 
      text-align: center;
      outline: none;
      background-color: #4CAF50;
@@ -48,14 +48,6 @@
         text-align: center;
        font-style: oblique;
         text-shadow: 3px 2px green;
-        word-spacing: -5px;
-        margin:20 auto;
-    }
-  h2 {
-        color: white;
-        text-align: center;
-       font-style: oblique;
-        
         word-spacing: -5px;
         margin:20 auto;
     }
@@ -129,7 +121,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
     <img src=  "https://img.icons8.com/color/2x/up.png " id="imageup" class="imaged" >
 
     <img src=  " https://media3.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif?cid=3640f6095c19093d584b696845d06519" class="gift"  id="gift">
-    <h2> Unutma tahmin için 3 hakkın var </h2>
+
 
 <script>
     var mesaj = "";
@@ -168,10 +160,10 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
     _sayi.value = "";
     sonuc.value="";
     sayi.value="";
+    tahminEt.disabled = false;
+    yeniOyun.disabled = true;
 
-    _tahminEt.disabled = false;
-    _yeniOyun.disabled = true;
-  
+     alert("Oyuna başlamak için bir rakam gir! 3 hakkınız var ");
   
        }
 
@@ -205,7 +197,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 
     else{
 
-
+ alert("Tahmın yapmak için rakam giriniz ");
 
     }
   
