@@ -10,13 +10,13 @@
      background-image : url("https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif");
     }
 input{
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     margin:0 auto;
     display: block;
     font-style: oblique;
-    font-size: 15px;
-    border-radius: 12px;
+    font-size:15px;
+    border-radius: 20px;
     
     }
 img{
@@ -33,9 +33,10 @@ button {
     outline: none;
   
     border: none;
-
-    font-style: italic;
+    background-color: #33ff66;
+    font-style: bold italic;
     font-size: 15px;
+    color: black;
     border-radius: 12px;
    
     }
@@ -127,7 +128,6 @@ a
 <li><a href=" https://www.w3schools.com/css/css3_animations.asp">REF3:For Animation </a></li>
 
 <script>
-  
     var hak;
     var rastgeleSayi = 0;
     var _tahminEt = tahminEt.value;
@@ -139,6 +139,7 @@ a
      
       sayi.value = "";
       sonuc.value="";
+  
     document.getElementById("imageup").style.display = "none";
   document.getElementById("imagedown").style.display = "none";
    document.getElementById("gift").style.display = "none";
@@ -186,11 +187,11 @@ a
       } 
 
       else if (girilenSayi > rastgeleSayi) {
-      sonuc.value = girilenSayi+"dan daha kücük";
+      sonuc.value = girilenSayi+"dan daha kücük"+"\n";
       document.getElementById("imagedown").style.display = "block";
         
       } 
- else  {
+ else if(girilenSayi == rastgeleSayi) {
        sonuc.value = "Congratulations!!!";
       document.getElementById("gift").style.display = "block";
     document.getElementById("imageup").style.display = "none";
@@ -199,7 +200,13 @@ a
  document.getElementById("yeniOyun").disabled = false;
     }
    
+else{
+ hak=4;
+ console.log(hak);
+    sonuc.value= "Lütfen tahmın için deger giriniz ";
 
+
+}
 
 
    
@@ -209,7 +216,7 @@ a
      document.getElementById("imageup").style.display = "none";
      document.getElementById("imagedown").style.display = "none";
      document.getElementById("gift").style.display = "none";
-       sonuc.value = " Kaybettiniz.Hakkınız bitti!!!";
+       sonuc.value = " Kaybettiniz.Hakkınız bitti!!! ";
  document.getElementById("tahminEt").disabled = true;
  document.getElementById("yeniOyun").disabled = false;
        alert("Kaybettiniz.Hakkınız bitti!!! Tutulan sayı = "+rastgeleSayi+"!");
