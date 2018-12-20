@@ -160,7 +160,7 @@ a
        }
     function tahmin() {
      var girilenSayi = parseInt(sayi.value);
-    console.log(rastgeleSayi);
+    console.log("tutulan sayı="+rastgeleSayi);
       document.getElementById("imageup").style.display = "none";
      document.getElementById("gift").style.display = "none";
 
@@ -170,24 +170,28 @@ a
     var veri = document.getElementById("sayi").value;
 
       if(veri>='a' && veri<='z'){
-       sonuc.value = "kucuk harf girdiniz";
-   
+hak=4;
+       sonuc.value= "Harf girdiniz.sayı giriniz";
+  console.log("hakkı="+hak);
+
 }
  
  else if(veri>='A' && veri<='Z'){
-   sonuc.value= "buyuk harf girdnizi";
-   
+hak=4;
+   sonuc.value= "Harf girdiniz.sayı giriniz";
+   console.log("hakkı="+hak);
+
 }
 
 
     else if (rastgeleSayi > girilenSayi) {
-        sonuc.value = girilenSayi+"dan daha büyük deger";
+        sonuc.value = girilenSayi+"dan daha büyük deger giriniz.";
         document.getElementById("imageup").style.display = "block";
           document.getElementById("imagedown").style.display = "none";
       } 
 
       else if (girilenSayi > rastgeleSayi) {
-      sonuc.value = girilenSayi+"dan daha kücük"+"\n";
+      sonuc.value = girilenSayi+"dan daha kücük deger giriniz."+"\n";
       document.getElementById("imagedown").style.display = "block";
         
       } 
@@ -203,7 +207,7 @@ a
 else{
  hak=4;
  console.log(hak);
-    sonuc.value= "Lütfen tahmın için deger giriniz ";
+    sonuc.value= "Lütfen tahmın için  deger giriniz ";
 
 
 }
