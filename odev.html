@@ -10,14 +10,14 @@
      background-image : url("https://media.giphy.com/media/WoD6JZnwap6s8/giphy.gif");
     }
 input{
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     margin:0 auto;
     display: block;
-    font-style: oblique;
+    font-style: bold italic;
     font-size:15px;
     border-radius: 20px;
-    
+
     }
 img{
     opacity: 1;
@@ -25,7 +25,7 @@ img{
     margin-left: auto;
     }
 button {
-    padding: 20px;
+    padding: 15px;
     margin:10 auto;
     display: block;
     font-size: 12px; 
@@ -40,6 +40,27 @@ button {
     border-radius: 12px;
    
     }
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
 h1 {
     color: white;
     text-align: center;
@@ -51,6 +72,14 @@ h1 {
 a
     {
    color: white;
+    }
+h2 {
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    text-shadow: 3px 2px green;
+    word-spacing: -5px;
+    margin:0 auto;
     }
  .imageu{
     width: 200px;
@@ -64,7 +93,8 @@ a
     animation-duration:1000ms;  
     animation-fill-mode: backwards;
     margin:20px auto;
-    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+   animation-timing-function: linear;
+       transition-duration: 10s;
 }
 .imaged{
     width: 200px;
@@ -78,7 +108,8 @@ a
     animation-duration: 1000ms;  
     animation-fill-mode: backwards;
     margin:20px auto;
-    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+    animation-timing-function: linear;
+   transition-duration: 10s;
 }
 .gift
     {
@@ -86,21 +117,23 @@ a
     height:200px;
     margin:0 auto;
     }
+
     @-webkit-keyframes imagede {
-  from {top: 200px;}
+  from {top: 300px;}
   to {top: 0px; background-color: green;}
 }
     @keyframes imagede{
-  from {top: 200px;}
+  from {top:300px;}
   to {top: 0px; background-color: green;}
 }
     @-webkit-keyframes imageu {
   from {top: 0px;}
-  to {top: 200px; background-color: green;}
+  to {top: 300px; background-color: green;}
 }
     @keyframes imageu {
   from {top: 0px;}
-  to {top: 200px; background-color: green ;}
+  to {top: 300px;
+      background-color: green ;}
 }
     </style>
 </head>
@@ -109,12 +142,12 @@ a
 
   <h1>Number Prediction Game</h1>
 
-    <button id="yeniOyun" onclick =" yeni()" > New Game </button>
-
+    <button id="yeniOyun" onclick =" yeni()" "class=" button2"> New Game </button>
+   <h2>Enter Number</h2>
     <input type="text" id="sayi" />
 
-    <button id="tahminEt"  onclick ="tahmin()"> Guess number 0 to 8 </button>
-
+    <button id="tahminEt"  onclick =" tahmin()" > Guess number 0 to 8 </button>
+    <h2>Guess Result</h2>
     <input type="text" id="sonuc"/>
 
    <img src="https://img.icons8.com/ios/2x/down.png " id="imagedown" class="imageu" >
@@ -134,7 +167,6 @@ a
     var _yeniOyun = yeniOyun.value;
   
     var _sayi = sayi.value;
-
  
      
       sayi.value = "";
@@ -153,9 +185,9 @@ a
     _sayi.value = "";
     sonuc.value="";
     sayi.value="";
- document.getElementById("tahminEt").disabled = false;
- document.getElementById("yeniOyun").disabled = true;
-     alert("Oyuna başlamak için bir rakam gir! 3 hakkınız var ");
+  document.getElementById("tahminEt").disabled = false;
+  document.getElementById("yeniOyun").disabled = true;
+     alert("You need to a number to play! You have 3 right to play ");
   
        }
     function tahmin() {
@@ -163,35 +195,26 @@ a
     console.log("tutulan sayı="+rastgeleSayi);
       document.getElementById("imageup").style.display = "none";
      document.getElementById("gift").style.display = "none";
-
-
-
-
     var veri = document.getElementById("sayi").value;
-
       if(veri>='a' && veri<='z'){
-hak=4;
-       sonuc.value= "Harf girdiniz.sayı giriniz";
+       hak=4;
+       sonuc.value= "You writed letters.Write Number.";
   console.log("hakkı="+hak);
-
 }
  
  else if(veri>='A' && veri<='Z'){
-hak=4;
-   sonuc.value= "Harf girdiniz.sayı giriniz";
+    hak=4;
+  
+   sonuc.value= "You writed letters.Write Number.";
    console.log("hakkı="+hak);
-
 }
-
-
     else if (rastgeleSayi > girilenSayi) {
-        sonuc.value = girilenSayi+"dan daha büyük deger giriniz.";
+        sonuc.value ="Entered a value higger than= " +girilenSayi;
         document.getElementById("imageup").style.display = "block";
           document.getElementById("imagedown").style.display = "none";
       } 
-
       else if (girilenSayi > rastgeleSayi) {
-      sonuc.value = girilenSayi+"dan daha kücük deger giriniz."+"\n";
+      sonuc.value = "Entered a value less than= " +girilenSayi;
       document.getElementById("imagedown").style.display = "block";
         
       } 
@@ -207,12 +230,8 @@ hak=4;
 else{
  hak=4;
  console.log(hak);
-    sonuc.value= "Lütfen tahmın için  deger giriniz ";
-
-
+    sonuc.value= "Please,For guess write number. ";
 }
-
-
    
   
  console.log("haksayısı ="+hak);
@@ -220,14 +239,15 @@ else{
      document.getElementById("imageup").style.display = "none";
      document.getElementById("imagedown").style.display = "none";
      document.getElementById("gift").style.display = "none";
-       sonuc.value = " Kaybettiniz.Hakkınız bitti!!! ";
+       sonuc.value = " Lost!..You finished right. ";
  document.getElementById("tahminEt").disabled = true;
  document.getElementById("yeniOyun").disabled = false;
-       alert("Kaybettiniz.Hakkınız bitti!!! Tutulan sayı = "+rastgeleSayi+"!");
+       alert("Lost! Guess Number = "+rastgeleSayi+"!");
     
     }
 hak--;
   }
+ 
 </script>
 
 </body>
